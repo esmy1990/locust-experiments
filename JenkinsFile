@@ -5,7 +5,7 @@ stages {
 	{
         steps 
 			{
-                git 'https://github.com/esmy1990/locust.git'
+                git 'https://github.com/esmy1990/locust-experiments.git'
                        
             }
 	
@@ -28,7 +28,7 @@ stages {
 			sh "docker login -u esmy1990 -p ${dockerpwd}"
 			}
 		
-			sh "docker  push esmy1990/locust:latest"
+			sh "docker  push esmy1990/locust:1"
 		}
     }
 }
