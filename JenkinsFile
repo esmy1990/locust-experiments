@@ -1,0 +1,35 @@
+pipeline {
+agent any
+stages {
+    stage('Build')
+	{
+        steps 
+			{
+                git 'https://github.com/esmy1990/locust.git'
+                       
+            }
+	
+	}
+    stage('docker build')
+	{
+        steps
+			{
+			 sh "docker build -t esmy1990/locust ."
+               
+            }
+    }
+	stage('docker ppush')
+	{
+        steps
+		{
+			withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerpwd')]) 
+			{
+		
+			sh "docker login -u esmy1990 -p ${dockerpwd}"
+			}
+		
+			sh "docker  push esmy1990/locust:latest"
+		}
+    }
+}
+}
