@@ -1,10 +1,10 @@
 pipeline {
 agent any
 environment {
-        PROJECT_ID = 'PROJECT-ID'
-        CLUSTER_NAME = 'CLUSTER-NAME'
-        LOCATION = 'CLUSTER-LOCATION'
-        CREDENTIALS_ID = 'gke'
+        PROJECT_ID = 'gentle-realm-285706'
+        CLUSTER_NAME = 'cluster-locust'
+        LOCATION = 'us-central1-c'
+        CREDENTIALS_ID = 'GKE'
     }
 stages {
     stage('checkout')
@@ -40,7 +40,9 @@ stages {
     stage('Deploy to GKE') {
             steps{
                 
-                step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
+                step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
+		sh "kubectl get ns "
+		sh "kubectl create namespace esmy"
             }
 }
 }
