@@ -36,7 +36,7 @@ stages {
 	{
 		steps
 		{
-			plot csvFileName: 'plot-bfb1b1b2-988f-468f-a986-74bd041dc489.csv', csvSeries: [[displayTableFlag: false, exclusionValues: '', file: 'example_stats.csv', inclusionFlag: 'OFF', url: '']], group: 'locust', style: 'line', title: 'Name', yaxis: 'Avg response time'
+			plot csvFileName: 'plot-d5cef80c-b67f-4bcd-9597-cbcf92431178.csv', csvSeries: [[displayTableFlag: false, exclusionValues: '', file: 'example_stats.csv', inclusionFlag: 'OFF', url: '']], group: 'locust', numBuilds: '10', style: 'bar3d', title: 'Name', yaxis: 'Avg response time'
 		} 
 	}
 }
