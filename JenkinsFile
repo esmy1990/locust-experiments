@@ -33,9 +33,11 @@ stages {
 		}
     }
     stage('plot')
-    steps
-    {
-    plot csvFileName: 'plot-a4b9d641-a6f0-4d63-81b6-9ad3d7c5a2b3.csv', csvSeries: [[displayTableFlag: false, exclusionValues: '', file: 'example_stats.csv', inclusionFlag: 'OFF', url: '']], group: '', numBuilds: '2', style: 'line'}
-   } 
+	{
+		steps
+		{
+			plot csvFileName: 'plot-a4b9d641-a6f0-4d63-81b6-9ad3d7c5a2b3.csv', csvSeries: [[displayTableFlag: false, exclusionValues: '', file: 'example_stats.csv', inclusionFlag: 'OFF', url: '']], group: '', numBuilds: '2', style: 'line'}
+		} 
+	}
 }
 }
