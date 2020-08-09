@@ -1,4 +1,5 @@
 import csv
+import pandas as pd
 with open('example_stats.csv') as csvfile:
     reader = csv.DictReader(csvfile)
 
@@ -12,3 +13,6 @@ with open('new.csv', 'w') as csvfile:
     writer.writeheader()
     for row in read_l[0:]:
         writer.writerow(row)
+
+pd.read_csv('new.csv', header=None).T.to_csv('new.csv', header=False, index=False)
+
