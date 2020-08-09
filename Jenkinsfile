@@ -7,7 +7,7 @@ stages {
 		steps
 		{
 			
-			plot csvFileName: 'plot-919e442c-3e2a-42d7-9174-5e2c4e4ccaeb.csv', csvSeries: [[displayTableFlag: false, exclusionValues: '', file: 'example_stats.csv', inclusionFlag: 'OFF', url: '']], group: 'Locust', numBuilds: '2', style: 'lineSimple', title: 'Name', yaxis: 'Name'
+			plot csvFileName: 'plot-b3474800-6fe5-4e9b-abd2-15805bb2d735.csv', csvSeries: [[displayTableFlag: false, exclusionValues: '', file: 'new.csv', inclusionFlag: 'OFF', url: '']], group: 'Locust', style: 'lineSimple', title: 'Average_response_time', yaxis: 'Name'
 		} 
 	}
 }
