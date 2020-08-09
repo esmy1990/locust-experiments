@@ -1,4 +1,2 @@
-Name,Average Response Time
-/login,142.68587936054575
-/metrics,130.15252834649255
-Aggregated,130.16650936881834
+Name,/login,/metrics,Aggregated
+Average Response Time,142.68587936054575,130.15252834649255,130.16650936881834
