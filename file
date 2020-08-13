@@ -10,16 +10,7 @@ pipeline
 			steps
 			{
 			
-			script
-				{
-			
- 	sh "python g.py"
-
-  				
-  
-				}
-
-			}
+			bat ("python g.py")
 			}
 		}
 	}
