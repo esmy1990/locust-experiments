@@ -13,8 +13,8 @@ pipeline
 			script
 				{
 			
- 		bat "python g.py > emily.txt"
-echo "Build full flag: ${emily.txt}"
+ 	def a = bat "python g.py"
+echo "Build full flag: ${a}"
   				
   
 				}
