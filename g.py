@@ -9,6 +9,6 @@ with open('new.csv', 'r') as read_obj:
             #try:
                 field = float(field)
                 if (field >= 100):
-                    return 1
+                    flag = 1
                     break
 print(flag)
