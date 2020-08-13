@@ -13,8 +13,8 @@ pipeline
 			script
 				{
 			
- 		BUILD_FULL = bat (script: "python g.py",returnStatus: true) == 0
-echo "Build full flag: ${BUILD_FULL}"
+ 		bat "python g.py ; return_value = returnStatus"
+echo "Build full flag: ${return_value}"
   				
   
 				}
