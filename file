@@ -14,7 +14,8 @@ pipeline
 				{
 			
  				bat "python g.py ; return_value = returnStatus"
- 				echo "$return_value"
+ 				echo "value:$return_value"
+				echo "return:$returnStatus"
 				}
 			}
 		}
