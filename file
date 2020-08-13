@@ -1,7 +1,8 @@
+def return_value
 pipeline
 {
 	agent any 
-	def return_value
+	
 	stages
 	{
 		stage('python')
@@ -12,7 +13,7 @@ pipeline
 			script
 				{
 			
- 				sh "python g.py ; return_value = returnStatus"
+ 				bat "python g.py ; return_value = returnStatus"
  				if ( return_value == true )
    				currentBuild.result = 'UNSTABLE'
 				
