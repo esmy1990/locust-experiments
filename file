@@ -10,7 +10,8 @@ pipeline
 			steps
 			{
 			
-			bat ("python g.py")
+			def a = bat ("python g.py")
+			echo "a={$a}"
 			}
 		}
 	}
