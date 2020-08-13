@@ -1,0 +1,17 @@
+pipeline
+{
+	agents any 
+	stages
+	{
+		stage('python')
+		{
+			steps
+			{
+			git 'https://github.com/esmy1990/locust-experiments.git'
+			def statusCode = sh script:script, returnStatus:true
+			sh 'python g.py'
+			currentBuild.result = 'FAILURE'
+			}
+		}
+	}
+}
