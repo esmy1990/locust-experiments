@@ -9,11 +9,12 @@ pipeline
 		{
 			steps
 			{
-			git 'https://github.com/esmy1990/locust-experiments.git'
+			
 			script
 				{
 			
  		def res = bat(script: g.py, returnStatus: true)
+		echo ($res)
   				
   
 				}
