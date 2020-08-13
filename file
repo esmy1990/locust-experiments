@@ -13,7 +13,7 @@ pipeline
 			script
 				{
 			
- 		def res = bat(script: g.py, returnStatus: true)
+ 		def res = bat("script: g.py, returnStatus: true")
 		echo ("$res")
   				
   
