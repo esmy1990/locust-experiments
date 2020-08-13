@@ -13,7 +13,7 @@ pipeline
 			script
 				{
 			
- 				def ret = sh(script: 'g.py', returnStdout: true)
+ 				def ret = bat(script: 'g.py', returnStdout: true)
 				println ret
 				}
 			}
