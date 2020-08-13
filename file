@@ -10,10 +10,10 @@ pipeline
 			git 'https://github.com/esmy1990/locust-experiments.git'
 			script
 				{
-				def statusCode = sh script:script, returnStatus:true
-				sh "python g.py"
-				sh "(exit 1) || true"
-					currentBuild.result = 'UNSTABLE'
+				def return_value
+ 				sh "python g.py ; return_value = returnStatus"
+ 				if ( return_value == true )
+   				currentBuild.result = 'UNSTABLE'
 				
 				}
 			}
