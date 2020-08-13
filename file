@@ -10,8 +10,7 @@ pipeline
 			steps
 			{
 			
-			def a = bat ("python g.py")
-			echo "a={$a}"
+			sh 'python --version'
 			}
 		}
 	}
