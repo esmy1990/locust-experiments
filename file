@@ -1,6 +1,6 @@
 pipeline
 {
-	agent any 
+	agents any 
 	stages
 	{
 		stage('python')
@@ -8,9 +8,15 @@ pipeline
 			steps
 			{
 			git 'https://github.com/esmy1990/locust-experiments.git'
-			def statusCode = sh script:script, returnStatus:true
-			sh 'python g.py'
-			currentBuild.result = 'FAILURE'
+			script
+				{
+				sh 'python g.py'
+				if ("${stdout}" == "1")
+					{
+					currentBuild.result = 'UNSTABLE'
+					return
+					}
+				}
 			}
 		}
 	}
