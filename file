@@ -13,8 +13,8 @@ pipeline
 			script
 				{
 			
- 				def ret = bat(script: 'g.py', returnStdout: true)
-				println ret
+ 				def ret = bat(script: 'g.py', returnStdout)
+				echo("$ret")
 				}
 			}
 		}
