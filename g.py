@@ -8,7 +8,7 @@ with open('new.csv', 'r') as read_obj:
         for field in row[1:]:
             #try:
                 field = float(field)
-                if (field >= 200):
+                if (field >= 100):
                     flag = 1
                     break
 print(flag)
