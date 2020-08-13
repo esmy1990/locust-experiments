@@ -12,7 +12,7 @@ pipeline
 				{
 				def statusCode = sh script:script, returnStatus:true
 				sh 'python g.py'
-				if (returnStatus == true)
+				sh "(exit 1) || true"
 					currentBuild.result = 'UNSTABLE'
 				
 				}
