@@ -1,6 +1,7 @@
 pipeline
 {
 	agent any 
+	def return_value
 	stages
 	{
 		stage('python')
@@ -10,7 +11,7 @@ pipeline
 			git 'https://github.com/esmy1990/locust-experiments.git'
 			script
 				{
-				def return_value
+			
  				sh "python g.py ; return_value = returnStatus"
  				if ( return_value == true )
    				currentBuild.result = 'UNSTABLE'
