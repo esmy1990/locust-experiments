@@ -13,7 +13,7 @@ pipeline
 			script
 				{
 			
- 		BUILD_FULL = sh (
+ 		BUILD_FULL = bat (
     script: "python g.py'",
     returnStatus: true
 ) == 0
