@@ -14,7 +14,7 @@ pipeline
 				{
 			
  		def res = bat(script: g.py, returnStatus: true)
-		echo ($res)
+		echo ("$res")
   				
   
 				}
