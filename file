@@ -13,8 +13,8 @@ pipeline
 			script
 				{
 			
- 		bat "python g.py ; return_value = returnStatus"
-echo "Build full flag: ${return_value}"
+ 		bat "python g.py > emily.txt"
+echo "Build full flag: ${emily.txt}"
   				
   
 				}
