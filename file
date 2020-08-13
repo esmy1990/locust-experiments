@@ -13,15 +13,7 @@ pipeline
 			script
 				{
 			
- 				bat("script: python g.py > merge.txt")
-				if  (grep -q "1" "$merge.txt") ;
-				then
-         			echo 'build failed'
-				currentBuild.result = 'FAILED'
-				else
-				echo "continue"
-         		
-fi
+ 		def res = bat(script: g.py, returnStatus: true)
   				
   
 				}
