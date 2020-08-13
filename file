@@ -13,10 +13,11 @@ pipeline
 			script
 				{
 			
- 		bat "python g.py >emily.txt"
-		if grep -q 1 "$emily.txt"; then
-  echo ("found")
-fi
+ 		BUILD_FULL = sh (
+    script: "python g.py'",
+    returnStatus: true
+) == 0
+echo "Build full flag: ${BUILD_FULL}"
   				
   
 				}
