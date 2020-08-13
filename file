@@ -13,9 +13,8 @@ pipeline
 			script
 				{
 			
- 				bat "python g.py ; return_value == returnStatus"
- 				echo "value:$return_value"
-				
+ 				def ret = sh(script: 'g.py', returnStdout: true)
+				println ret
 				}
 			}
 		}
