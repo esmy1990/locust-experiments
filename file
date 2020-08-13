@@ -10,7 +10,7 @@ pipeline
 			steps
 			{
 			
-			bat 'python --version'
+			bat label: '', script: 'python --version'
 			}
 		}
 	}
