@@ -13,8 +13,10 @@ pipeline
 			script
 				{
 			
- 		def res = bat "python g.py ; returnStatus"
-		echo ("$res")
+ 		bat "python g.py >emily.txt"
+		if grep -q 1 "$emily.txt"; then
+  echo ("found")
+fi
   				
   
 				}
