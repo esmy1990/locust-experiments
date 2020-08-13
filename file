@@ -7,15 +7,13 @@ pipeline
 		{
 			steps
 			{
-			git 'https://github.com/esmy1990/locust-experiments.git'
+			
 			script
 				{
-				bat 'python g.py'
-				if ("${stdout}" == "1")
-					{
-					currentBuild.result = 'UNSTABLE'
-					return
-					}
+				sh 'python g.py'
+				sh "(exit 1) || true"
+				currentBuild.result = 'UNSTABLE'
+				
 				}
 			}
 		}
