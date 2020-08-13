@@ -13,7 +13,7 @@ pipeline
 			script
 				{
 			
- 				sh "python g.py ; return_value = returnStatus"
+ 				bat "python g.py ; return_value = returnStatus"
  				if ( return_value == true )
 				echo "failure"
    				currentBuild.result = 'UNSTABLE'
