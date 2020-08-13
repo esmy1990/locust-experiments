@@ -1,5 +1,5 @@
 import csv
-import panda as pd
+import pandas as pd
 with open('example_stats.csv') as csvfile:
     reader = csv.DictReader(csvfile)
 
